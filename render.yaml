@@ -1,0 +1,12 @@
+services:
+  - type: cron
+    name: bot_ev_plus
+    schedule: "*/10 * * * *"
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: 7738392758:AAFsMfvVcA1xingWTYmwdBjkR2DO6ozP8Ek
+      - key: CHAT_ID
+        value: "7943883784"
